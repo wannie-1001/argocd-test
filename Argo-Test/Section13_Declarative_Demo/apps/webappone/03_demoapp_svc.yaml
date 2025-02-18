@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webappone
+  name: webappone-svc
+#  namespace: webappone-ns
+spec:
+  ports:
+  - name: webappone-ports
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: webappone
+  type: NodePort

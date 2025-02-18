@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webapptwo
+  name: webapptwo-dep
+#  namespace: webapptwo-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapptwo
+  template:
+    metadata:
+      labels:
+        app: webapptwo
+    spec:
+      containers:
+      - image: nginx:latest
+        name: webapptwo

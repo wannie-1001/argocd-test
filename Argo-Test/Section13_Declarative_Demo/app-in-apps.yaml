@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appofapps
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+
+  project: default
+
+  source:
+    repoURL: https://github.com/yogeshraheja/Argo-CD-for-the-Absolute-Beginners.git
+    path: Section13_Declarative_Demo/apps
+    targetRevision: HEAD

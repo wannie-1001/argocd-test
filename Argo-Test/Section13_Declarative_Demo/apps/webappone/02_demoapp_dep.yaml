@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webappone
+  name: webappone-dep
+#  namespace: webappone-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webappone
+  template:
+    metadata:
+      labels:
+        app: webappone
+    spec:
+      containers:
+      - image: thinknyx/demoapp:v1
+        name: webappone
