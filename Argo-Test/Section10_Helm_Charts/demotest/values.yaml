@@ -5,7 +5,7 @@
 replicaCount: 3
 
 image:
-  repository: yogeshraheja/devopsinaction
+  repository: wannie419/github-action-demo:latest
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
